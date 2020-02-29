@@ -113,7 +113,7 @@ namespace alpr
       Mat img_contours(baseImage.size(), CV_8U);
       baseImage.copyTo(img_contours);
 
-      cvtColor(img_contours, img_contours, CV_GRAY2RGB);
+      cvtColor(img_contours, img_contours, COLOR_GRAY2RGB);
 
       vector<vector<Point> > allowedContours;
       for (unsigned int i = 0; i < this->contours.size(); i++)

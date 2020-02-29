@@ -99,8 +99,8 @@ namespace alpr
       Mat debugImgVert(edges.size(), edges.type());
       edges.copyTo(debugImgHoriz);
       edges.copyTo(debugImgVert);
-      cvtColor(debugImgHoriz,debugImgHoriz,CV_GRAY2BGR);
-      cvtColor(debugImgVert,debugImgVert,CV_GRAY2BGR);
+      cvtColor(debugImgHoriz,debugImgHoriz,COLOR_GRAY2BGR);
+      cvtColor(debugImgVert,debugImgVert,COLOR_GRAY2BGR);
 
       for( size_t i = 0; i < this->horizontalLines.size(); i++ )
       {

@@ -84,7 +84,7 @@ namespace alpr
 
     cout << " Adding label " << label << endl;
     if (input.type() == CV_8U)
-      cvtColor(newImage, newImage, CV_GRAY2BGR);
+      cvtColor(newImage, newImage, COLOR_GRAY2BGR);
 
     rectangle(newImage, Point(0,0), Point(input.cols, extraHeight), bg, CV_FILLED);
     putText(newImage, label, Point(5, extraHeight - 5), CV_FONT_HERSHEY_PLAIN  , 0.7, fg);

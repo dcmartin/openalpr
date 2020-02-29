@@ -27,6 +27,7 @@
 #include "support/filesystem.h"
 #include "../tclap/CmdLine.h"
 #include "support/utf8.h"
+#include "opencv2/imgproc/types_c.h"
 
 using namespace std;
 using namespace cv;
@@ -156,7 +157,7 @@ int main( int argc, const char** argv )
       bitwise_not(charImgCopy, charImgCopy);
 
       characterImg.copyTo(charImgCopy(Rect(X_OFFSET, Y_OFFSET, characterImg.cols, characterImg.rows)));
-      cvtColor(charImgCopy, charImgCopy, CV_BGR2GRAY);
+      cvtColor(charImgCopy, charImgCopy, COLOR_BGR2GRAY);
       bitwise_not(charImgCopy, charImgCopy);
 
       vector<vector<Point> > contours;
@@ -198,7 +199,7 @@ int main( int argc, const char** argv )
 
       //cout << "Cropped: " << cropRect.x << ":" << cropRect.y << " -- " << cropRect.width << ":" << cropRect.height << endl;
       Mat cropped(characterImg, cropRect);
-      cvtColor(cropped, cropped, CV_BGR2GRAY);
+      cvtColor(cropped, cropped, COLOR_BGR2GRAY);
 
       Rect destinationRect(xPos, yPos, tallestRect.width, tallestRect.height);
       //cout << "1" << endl;

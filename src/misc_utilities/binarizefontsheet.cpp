@@ -71,7 +71,7 @@ bool sort_lined_rectangles(Rect i, Rect j) {
 void show_debug_image(vector<Rect> rectangles, Mat img)
 {
     Mat debugImg;
-    cvtColor(img, debugImg, CV_GRAY2BGR);
+    cvtColor(img, debugImg, COLOR_GRAY2BGR);
     for (unsigned int i = 0; i < rectangles.size(); i++)
     {
       Rect mr = rectangles[i];
@@ -172,7 +172,7 @@ int main(int argc, char** argv) {
 
     Config config("us");
     
-    cvtColor(frame, frame, CV_BGR2GRAY);
+    cvtColor(frame, frame, COLOR_BGR2GRAY);
     vector<Mat> thresholds = produceThresholds(frame, &config);
     
     

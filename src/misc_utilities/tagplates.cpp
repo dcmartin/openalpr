@@ -30,6 +30,8 @@
 #include "support/filesystem.h"
 #include "config.h"
 
+#include "opencv2/imgproc/imgproc_c.h"
+
 
 
 #ifdef __APPLE__

@@ -253,14 +253,14 @@ namespace alpr
       {
         Mat tmp(pipeline_data->thresholds[z].size(), pipeline_data->thresholds[z].type());
         pipeline_data->thresholds[z].copyTo(tmp);
-        cvtColor(tmp, tmp, CV_GRAY2BGR);
+        cvtColor(tmp, tmp, COLOR_GRAY2BGR);
 
         tempDash.push_back(tmp);
       }
 
       Mat bestVal(this->bestThreshold.size(), this->bestThreshold.type());
       this->bestThreshold.copyTo(bestVal);
-      cvtColor(bestVal, bestVal, CV_GRAY2BGR);
+      cvtColor(bestVal, bestVal, COLOR_GRAY2BGR);
 
       for (unsigned int z = 0; z < this->bestContours.size(); z++)
       {

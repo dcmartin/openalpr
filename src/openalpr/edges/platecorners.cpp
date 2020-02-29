@@ -86,7 +86,7 @@ namespace alpr
 
       Mat imgCorners = Mat(inputImage.size(), inputImage.type());
       inputImage.copyTo(imgCorners);
-      cvtColor(imgCorners, imgCorners, CV_GRAY2BGR);
+      cvtColor(imgCorners, imgCorners, COLOR_GRAY2BGR);
 
       for (unsigned int linenum = 0; linenum < textLines.size(); linenum++)
       {
@@ -337,7 +337,7 @@ namespace alpr
       scoreKeeper.printDebugScores();
       Mat debugImg(this->inputImage.size(), this->inputImage.type());
       this->inputImage.copyTo(debugImg);
-      cvtColor(debugImg, debugImg, CV_GRAY2BGR);
+      cvtColor(debugImg, debugImg, COLOR_GRAY2BGR);
       line(debugImg, top.p1, top.p2, Scalar(0,0,255), 2);
       line(debugImg, bottom.p1, bottom.p2, Scalar(0,0,255), 2);
       //drawAndWait(&debugImg);

@@ -105,7 +105,7 @@ namespace alpr
 //        {
 //          Mat histoCopy(vertHistogram.histoImg.size(), vertHistogram.histoImg.type());
 //          //vertHistogram.copyTo(histoCopy);
-//          cvtColor(vertHistogram.histoImg, histoCopy, CV_GRAY2RGB);
+//          cvtColor(vertHistogram.histoImg, histoCopy, COLOR_GRAY2RGB);
 //
 //          string label = "threshold: " + toString(i);
 //          allHistograms.push_back(addLabel(histoCopy, label));
@@ -151,7 +151,7 @@ namespace alpr
           Mat boxMask = getCharBoxMask(pipeline_data->thresholds[i], candidateBoxes);
           pipeline_data->thresholds[i].copyTo(cleanImg);
           bitwise_and(cleanImg, boxMask, cleanImg);
-          cvtColor(cleanImg, cleanImg, CV_GRAY2BGR);
+          cvtColor(cleanImg, cleanImg, COLOR_GRAY2BGR);
 
           for (unsigned int c = 0; c < candidateBoxes.size(); c++)
             rectangle(cleanImg, candidateBoxes[c], Scalar(0, 255, 0), 1);
@@ -376,12 +376,12 @@ namespace alpr
 
     if (this->config->debugCharSegmenter)
     {
-      cvtColor(histoImg, histoImg, CV_GRAY2BGR);
+      cvtColor(histoImg, histoImg, COLOR_GRAY2BGR);
       line(histoImg, Point(0, histoImg.rows - 1 - bestRowIndex), Point(histoImg.cols, histoImg.rows - 1 - bestRowIndex), Scalar(0, 255, 0));
 
       Mat imgBestBoxes(img.size(), img.type());
       img.copyTo(imgBestBoxes);
-      cvtColor(imgBestBoxes, imgBestBoxes, CV_GRAY2BGR);
+      cvtColor(imgBestBoxes, imgBestBoxes, COLOR_GRAY2BGR);
       for (unsigned int i = 0; i < bestBoxes.size(); i++)
         rectangle(imgBestBoxes, bestBoxes[i], Scalar(0, 255, 0));
 

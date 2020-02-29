@@ -26,8 +26,11 @@
 #include "constants.h"
 #include "support/timing.h"
 #include "opencv2/highgui/highgui.hpp"
+#include "opencv2/imgproc.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
+#include "opencv2/imgproc/imgproc_c.h"
 #include "opencv2/core/core.hpp"
+#include "opencv2/core.hpp"
 #include "binarize_wolf.h"
 #include "config.h"
 

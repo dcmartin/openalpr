@@ -9,7 +9,7 @@ Check out a live online demo here: [http://www.openalpr.com/demo-image.html](htt
 ## Installation
 Outside of use in building the [`alpr`](http://github.com/dcmartin/open-horizon/tree/master/alpr/README.md) _service_, see [The Easy Way](https://github.com/openalpr/openalpr/wiki/Compilation-instructions-(Ubuntu-Linux)#the-easy-way) for installation on Debian LINUX.
 
-&#9995; Remember to specify **`http://github.com/dcmartin/alpranno.git`** as the repository.
+&#9995; Remember to specify **`http://github.com/dcmartin/openalpr.git`** as the repository.
 
 ## Usage
 OpenALPR includes a command line utility: `alpr`.  Options may be specified for a variety of needs:

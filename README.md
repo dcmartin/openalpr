@@ -7,7 +7,9 @@ OpenALPR is an open source *Automatic License Plate Recognition* library written
 Check out a live online demo here: [http://www.openalpr.com/demo-image.html](http://www.openalpr.com/demo-image.html)
 
 ## Installation
-Outside of use in building the `alpr` _service_, see [detailed instructions](https://github.com/openalpr/openalpr/wiki/Compilation-instructions-(Ubuntu-Linux)) for installation on Debian LINUX.
+Outside of use in building the [`alpr`](http://github.com/dcmartin/open-horizon/tree/master/alpr/README.md) _service_, see [The Easy Way](https://github.com/openalpr/openalpr/wiki/Compilation-instructions-(Ubuntu-Linux)#the-easy-way) for installation on Debian LINUX.
+
+&#9995; Remember to specify **`http://github.com/dcmartin/alpranno.git`** as the repository.
 
 ## Usage
 OpenALPR includes a command line utility: `alpr`.  Options may be specified for a variety of needs:

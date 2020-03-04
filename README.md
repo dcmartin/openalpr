@@ -15,13 +15,13 @@ Outside of use in building the [`alpr`](http://github.com/dcmartin/open-horizon/
 OpenALPR includes a command line utility: `alpr`.  Options may be specified for a variety of needs:
 
 ### `alpr` options
- + `-c``--country` _country code_ - Either `us` for USA or `eu` for Europe; default: `us`
+ + `-c --country` _country code_ - Either `us` for USA or `eu` for Europe; default: `us`
  + `--config` _config file_ - Path to the `openalpr.conf` file
- + `-n``--topn` _integer_ - Maximum possible plates to return; default: `10`
+ + `-n --topn` _integer_ - Maximum possible plates to return; default: `10`
  + `--seek` _milliseconds_ -  Seek to the specified millisecond in a video file; default: `0`
- + `-p``--pattern` _pattern code_ - Pattern to match (e.g. `H7*`) for plate; default: _none_
+ + `-p --pattern` _pattern code_ - Pattern to match (e.g. `H7*`) for plate; default: _none_
  + `--clock` _on/off_ -  Measure the total time to process image and all plates; default: `off`
- + `-j``--json` - Output recognition results in JSON format; default: _false_
+ + `-j --json` - Output recognition results in JSON format; default: _false_
 
 ## Example
 After successfully building the `alpr` executable  use the shell script [alpranno.sh](example/alpranno.sh) to annotate the original image with all detected license plates, for example:
@@ -70,7 +70,7 @@ After successfully building the `alpr` executable  use the shell script [alprann
 The script requires [ImageMagick](https://imagemagick.org/index.php) and [`jq`](https://stedolan.github.io/jq/) software; to install on Debian LINUX: 
 
 ```
-sudo apt update -qq -y && apt install -qq -y imagemagick jq
+sudo apt update -qq -y && sudo apt install -qq -y imagemagick jq
 ```
 
 Use the the shell script to annotate the image; for example:
